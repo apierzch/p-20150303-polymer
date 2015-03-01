@@ -1,0 +1,44 @@
+<h2>Shadow DOM</h2>
+
+
+<div class="element" style="text-align: center;">
+<pre style="font-size: 50%;">
+&lt;video controls=&quot;controls&quot; src=&quot;res/wjug.mp4&quot;&gt;&lt;/video&gt;
+</pre>
+    <video controls="controls" src="res/wjug.mp4"></video>
+</div>
+
+
+<div class="notes">
+    <p> Zacznijmy od Shadow DOM. Żeby najprościej wytłumaczyć co to jest, spójrzmy na ten przykład.<br/>
+        Widzimy element video, z prezetacją Kamila Szymańskiego z warszawskiego JUGa. Jest to pojedyńczy element HTML, co zaraz zobaczymy w
+        dev
+        toolsach, a jednak widzimy że jest on bardzo złożony. <br/>
+        Przede wszystkim mamy element do wyświetlania samego filmu. Ale poniżej mamy sporo kontrolek: przycisk do odtwarzania, który
+        zamienia
+        się w przycisk do pauzy; pasek do przewijania; informacje o aktualnym momencie w filmie; kontrolkę głośności i na końcu guzik do
+        fullscreena. <br/>
+        No to sprawdźmy, czy możemy sprawdzić co tam w środku siedzi.
+    </p>
+
+    <p><b>demo</b></p>
+    <ul>
+        <li>- DevTools sprawdzenie zawartości video</li>
+        <li>- DevTools włączenie Shadow DOM</li>
+        <li>- DevTools ponowne sprawdzenie zawartości</li>
+    </ul>
+
+    <p> Co tutaj widzimy? Otóż elementy dostarczane nam przez przeglądarkę, bardzo często są dość złożone. Mają wiele elementów w środku, są
+        jakoś ostylowane, i mają zdefiniowane zachowanie. A my, jako ich użytkownicy nie mamy dostępu do tych wnętrzności, mamy ograniczone
+        możliwości zmiany stylowania i zachowania takich elementów. Dzięki temu użytkownicy naszej strony widząc jakiś element rozpoznają
+        go,
+        wiedzą jakiego zachowania się spodziewać i nie muszą go na nowo odkrywać, bo wiedzą, że już się z tym spotkali. A my wpisujemy do
+        naszego html-a jedną linijkę - jak w przykładzie tutaj - i mamy bezproblemowo działający, bardzo złożony element.
+    </p>
+    <p> Teraz okazuje się, że my - webdeveloperzy - dostaliśmy do rąz narzędzie, które pozwala nam w dość prosty sposób tworzyć nowe
+        elementy, które będą odizolowane od aplikacji, oraz będą wszędzie wyglądały i zachowywały się tak samo. Spróbujmy więc coś
+        takiego zrobić.
+    </p>
+
+</div>
+

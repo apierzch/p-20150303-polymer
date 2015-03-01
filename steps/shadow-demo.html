@@ -1,0 +1,53 @@
+<h2>Demo!</h2>
+
+
+<div class="notes">
+    <a href="demo/ready/01-simple-button.html">demo/ready/01-simple-button.html</a>
+
+    <p> Stwórzmy sobie element, np. button. Dajmy mu jakiś tekst, 'Hello, world!'. Następnie napiszemy kawałek skryptu.
+    </p>
+    <ul>
+        <li>querySelector</li>
+        <li>createShadowRoot</li>
+        <li>textContent</li>
+    </ul>
+    <p> Jak widzimy, tekst naszego buttona zmienił się. Nic nadzwyczajnego na pierwszy rzut oka. Więc rzućmy teraz tym okiem na drzewo
+        DOM. Okazuje się, że nasz button dostał #shadow-root. Rzeczywiście, przecież je stworzyliśmy. Ale obok siedzi nadal stare 'Hello
+        world!' zamiast 'Hello, all!'. Okazuje się, że od momentu kiedy stworzyliśmy shadow-root, przeglądarkę interesuje tylko i
+        wyłącznie to. Możemy sobie dodawać do elementu co tylko nam się podoba, ale zobaczymy tylko to, co wymyślił autor komponentu.
+    </p>
+
+    <p> Co więcej, okazuje się, że z zewnątrz nie mamy dostępu do tego, co siedzi w tym komponencie. textContent cały czas zwraca
+        'Hello, world!'.
+    </p>
+
+    <a href="demo/ready/02-simple-badge.html">demo/ready/02-simple-badge.html</a>
+
+    <p> Sprobujmy czegoś trudniejszego. Mam przygotowany button twitterowy, dzięki któremu możecie zacząć mnie 'śledzić'. Z punktu
+        widzenia developera, który chce taki przycisk umieścić na swojej stronie, istotna jest tylko nazwa użytkownika na twitterze,
+        którego ten przycisk ma dotyczyć. Więc powinna to być jedyna informacja przyjmowana/wystawiana przez taki element. Jest to jego API.
+    </p>
+    <p>
+        * template
+        * content tag + default value
+    </p>
+
+    <a href="demo/ready/03-more-content.html">demo/ready/03-more-content.html</a>
+    * content selector
+
+    <a href="demo/ready/04-content-selectors.html">demo/ready/04-content-selectors.html</a>
+    * content selecting order
+
+    <a href="demo/ready/05-styles.html">demo/ready/05-styles.html</a>
+    * css nie sięgają poza shadow root
+    * :host selector
+        * :host(.selector)
+        * :host-context(.theme)
+        * ::shadow
+        * /deep/
+        * variables - var(--button-color, red);   // browser support (usunięta implementacja w chrome)
+        * content[select="h3"]::content > h3
+
+
+</div>
+

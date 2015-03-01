@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<template id="employee-template">
+    <style>
+        .name-container {
+            color: red;
+        }
+        .title-container {
+            font-weight: bold;
+        }
+    </style>
+    <div class="name-container">
+        <content select=".name"></content>
+    </div>
+    <div class="title-container">
+        title: <content select=".title"></content>
+    </div>
+</template>
+
+<div class="employee">
+    <h2 class="name">John Snow</h2>
+    <span class="title">CEO</span>
+</div>
+
+<script>
+    var root = document.querySelector('.employee').createShadowRoot();
+    var template = document.querySelector('#employee-template');
+    var clone = document.importNode(template.content, true);
+    root.appendChild(clone);
+</script>
+
+</body>
+</html>

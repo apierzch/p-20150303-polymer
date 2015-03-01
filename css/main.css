@@ -1,0 +1,28 @@
+.notes {
+    display:none;
+}
+
+.step h2 {
+    font-size: 78px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.step {
+    min-height: 800px;
+    min-width: 1000px;
+}
+
+.element {
+    text-align: center;
+}
+
+pre {
+    margin-bottom: 20px;
+    font-size: 50%;
+}
+
+video {
+    max-height: 500px;
+    max-width: 800px;
+}

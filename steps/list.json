@@ -1,0 +1,28 @@
+[
+    {
+        "uri": "web-components.html",
+        "id": "web-components",
+        "class": "step",
+        "data": {
+            "rotate-z": 90
+        }
+    },
+    {
+        "uri": "shadow-dom-1.html",
+        "id": "shadow-dom-1",
+        "class": "step",
+        "data": {
+            "y": 2000,
+            "rotate-z": 90
+        }
+    },
+    {
+        "uri": "shadow-demo.html",
+        "id": "shadow-demo",
+        "class": "step",
+        "data": {
+            "y": 4000,
+            "rotate-z": 90
+        }
+    }
+]

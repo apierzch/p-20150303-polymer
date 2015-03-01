@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body class="bordered">
+
+<template id="my-template">
+    <style>
+        div {
+            background-color: deepskyblue;
+        }
+    </style>
+
+    <div>
+        This should have blue background.
+    </div>
+</template>
+
+<div id="my-element"></div>
+<div>This should have normal background.</div>
+
+<script>
+    var root = document.querySelector('#my-element').createShadowRoot();
+    var template = document.querySelector('#my-template');
+    var clone = document.importNode(template.content, true);
+    root.appendChild(clone);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<template id="my-template">
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .green {
+            color: green;
+        }
+    </style>
+    <div class="red">
+        <content select=".long"></content>
+    </div>
+    <div class="blue">
+        <content select="span"></content>
+    </div>
+    <div class="green">
+        <content select=".short"></content>
+    </div>
+</template>
+
+<div class="host">
+    <span class="long">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+    <span class="medium">Lorem ipsum dolor sit amet.</span>
+    <span class="short">Lorem ipsum.</span>
+</div>
+
+<script>
+    var root = document.querySelector('.host').createShadowRoot();
+    var template = document.querySelector('#my-template');
+    var clone = document.importNode(template.content, true);
+    root.appendChild(clone);
+</script>
+
+</body>
+</html>

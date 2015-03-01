@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<template id="twitter-follow-badge">
+    <style>
+        .follow-badge {
+            display: inline-block;
+            padding: 1px 3px 0 19px;
+            border: #ccc solid 1px;
+            border-radius: 3px;
+            background: #f8f8f8 url(//platform.twitter.com/images/bird.png) 2px 3px no-repeat;
+            background: url(//platform.twitter.com/images/bird.png) 2px 3px no-repeat, -webkit-linear-gradient(#fff, #dedede);
+            background: url(//platform.twitter.com/images/bird.png) 2px 3px no-repeat, linear-gradient(#fff, #dedede);
+            background-size: 16px 13px, auto auto;
+
+            /* Text */
+            font: bold 11px/17px Helvetica, Arial, sans-serif;
+            text-decoration: none;
+            color: #333;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+            white-space: nowrap;
+        }
+
+        .follow-badge a {
+            text-decoration: none;
+            color: #000000;
+        }
+    </style>
+    <div class="follow-badge">
+        <a id="follow-button" title="Follow @apierzch on Twitter"
+           href="https://twitter.com/intent/follow?screen_name=apierzch">
+            <span class="label">Follow <b>@<content>apierzch</content></b></span>
+        </a>
+    </div>
+</template>
+
+<div class="twitter-badge">WarszawaJUG</div>
+
+<script>
+    var root = document.querySelector('.twitter-badge').createShadowRoot();
+    var template = document.querySelector('#twitter-follow-badge');
+    var clone = document.importNode(template.content, true);
+    root.appendChild(clone);
+</script>
+
+</body>
+</html>
