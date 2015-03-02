@@ -3,23 +3,28 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
 </head>
 <body class="bordered">
 
 <template id="my-template">
     <style>
-        div {
+        span {
             background-color: deepskyblue;
         }
     </style>
 
-    <div>
+    <span>
         This should have blue background.
-    </div>
+    </span>
 </template>
 
 <div id="my-element"></div>
-<div>This should have normal background.</div>
+<span>This should have normal background.</span>
 
 <script>
     var root = document.querySelector('#my-element').createShadowRoot();
