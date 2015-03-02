@@ -1,9 +1,18 @@
 [
     {
+        "uri": "zero.html",
+        "id": "zero",
+        "class": "step",
+        "data": {
+            "x": 2000
+        }
+    },
+    {
         "uri": "intro.html",
         "id": "intro",
         "class": "step",
         "data": {
+            "x": 2000
         }
     },
     {
@@ -73,6 +82,14 @@
     {
         "uri": "polymer-02.html",
         "id": "polymer2",
+        "class": "step",
+        "data": {
+            "x": 2000
+        }
+    },
+    {
+        "uri": "end.html",
+        "id": "end",
         "class": "step",
         "data": {
             "x": 2000
