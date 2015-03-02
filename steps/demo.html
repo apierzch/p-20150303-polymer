@@ -1,0 +1,85 @@
+<h2>Demo!</h2>
+
+
+<div class="notes">
+    <a href="demo/todo/01-simple-button.html">demo/ready/01-simple-button.html</a>
+    <a href="demo/ready/01-simple-button.html">demo/ready/01-simple-button.html</a>
+
+    <p> Stwórzmy sobie element, np. button. Dajmy mu jakiś tekst, 'Hello, world!'. Następnie napiszemy kawałek skryptu.
+    </p>
+    <ul>
+        <li>querySelector</li>
+        <li>createShadowRoot</li>
+        <li>textContent</li>
+    </ul>
+    <p> Jak widzimy, tekst naszego buttona zmienił się. Nic nadzwyczajnego na pierwszy rzut oka. Więc rzućmy teraz tym okiem na drzewo
+        DOM. Okazuje się, że nasz button dostał #shadow-root. Rzeczywiście, przecież je stworzyliśmy. Ale obok siedzi nadal stare 'Hello
+        world!' zamiast 'Hello, all!'. Okazuje się, że od momentu kiedy stworzyliśmy shadow-root, przeglądarkę interesuje tylko i
+        wyłącznie to. Możemy sobie dodawać do elementu co tylko nam się podoba, ale zobaczymy tylko to, co wymyślił autor komponentu.
+    </p>
+
+    <p> Co więcej, okazuje się, że z zewnątrz nie mamy dostępu do tego, co siedzi w tym komponencie. textContent cały czas zwraca
+        'Hello, world!'.
+    </p>
+
+    <a href="demo/todo/02-simple-badge.html">demo/ready/02-simple-badge.html</a>
+    <a href="demo/ready/02-simple-badge.html">demo/ready/02-simple-badge.html</a>
+
+    <p> Sprobujmy czegoś trudniejszego. Mam przygotowany button twitterowy, dzięki któremu możecie zacząć mnie 'śledzić'. Z punktu
+        widzenia developera, który chce taki przycisk umieścić na swojej stronie, istotna jest tylko nazwa użytkownika na twitterze,
+        którego ten przycisk ma dotyczyć. Więc powinna to być jedyna informacja przyjmowana/wystawiana przez taki element. Jest to jego API.
+    </p>
+    <pre>
+    * template
+    * content tag + default value
+    </pre>
+
+    <a href="demo/todo/03-more-content.html">demo/ready/03-more-content.html</a>
+    <a href="demo/ready/03-more-content.html">demo/ready/03-more-content.html</a>
+    <pre>
+    * content selector
+    </pre>
+
+    <a href="demo/todo/04-content-selectors.html">demo/ready/04-content-selectors.html</a>
+    <a href="demo/ready/04-content-selectors.html">demo/ready/04-content-selectors.html</a>
+    <pre>
+    * content selecting order
+    </pre>
+
+    <a href="demo/todo/05-styles.html">demo/ready/05-styles.html</a>
+    <a href="demo/ready/05-styles.html">demo/ready/05-styles.html</a>
+    <pre>
+    * css nie sięgają poza shadow root
+    * :host selector
+        * :host(.selector)
+        * :host-context(.theme)
+        * ::shadow
+        * /deep/
+        * variables - var(--button-color, red);   // browser support (usunięta implementacja w chrome)
+        * content[select="h3"]::content > h3
+    </pre>
+
+    <a href="demo/todo/06-element.html">demo/ready/06-element.html</a>
+    <a href="demo/ready/06-element.html">demo/ready/06-element.html</a>
+
+    <p> Ok, ale co nam z tego wszystkiego jeśli musimy to ustawiać na każdym elemencie od nowa. I gdzie te czytelne elementy które
+        obiecałem na początku? Czas i na to.
+    </p>
+    <pre>
+    * registerElement()
+    * prototype, extends
+        * wymagany myślnik
+        * HTMLElement
+        * HTMLUnknownElement
+    * callbacks - tworzenie innerHTML w createdCallback
+    * adding shadow DOM
+    </pre>
+
+    <a href="demo/todo/07-element-import.html">demo/ready/07-element-import.html</a>
+    <a href="demo/ready/07-element-import.html">demo/ready/07-element-import.html</a>
+    <pre>
+    * custom element + shadow DOM + template + import HTML
+    * sub-imports
+    </pre>
+</div>
+

@@ -1,5 +1,5 @@
 .notes {
-    display:none;
+    display: none;
 }
 
 .step h2 {
@@ -13,7 +13,7 @@
     min-width: 1000px;
 }
 
-.element {
+.center {
     text-align: center;
 }
 
@@ -25,4 +25,8 @@ pre {
 video {
     max-height: 500px;
     max-width: 800px;
+}
+
+img {
+    max-width: 1000px;
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table style="border: solid black 1px;">
+    <tr>
+        <th>Callback name</th>
+        <th>Called when</th>
+    </tr>
+    <tr>
+        <td>createdCallback</td>
+        <td>an instance of the element is created</td>
+    </tr>
+    <tr>
+        <td>attachedCallback</td>
+        <td>an instance was inserted into the document</td>
+    </tr>
+    <tr>
+        <td>detachedCallback</td>
+        <td>an instance was removed from the document</td>
+    </tr>
+    <tr>
+        <td>attributeChangedCallback(attrName, oldVal, newVal)</td>
+        <td>an attribute was added, removed, or updated</td>
+    </tr>
+
+</table>
+
+<template id="mail-template">
+    <style>
+        content[select=".sender"]::content > span {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <div>
+        <b>This is mail!</b>
+        <br/>From:
+        <content select=".sender">
+            <span>me</span>
+        </content>
+        <br/>To:
+        <content select=".receipient">
+            <span>you</span>
+        </content>
+        <br/>Subject:
+        <content select=".subject">
+            <span>hello</span>
+        </content>
+    </div>
+</template>
+
+
+<my-mail>
+    <span class="sender">Stark</span>
+    <span class="receipient">Lannister</span>
+    <span class="subject">Get lost</span>
+</my-mail>
+<my-mail></my-mail>
+<my-mail></my-mail>
+<my-mail></my-mail>
+
+<script>
+
+    var proto = Object.create(HTMLElement.prototype);
+    proto.createdCallback = function () {
+        var template = document.querySelector('#mail-template');
+        var clone = document.importNode(template.content, true);
+        this.createShadowRoot().appendChild(clone);
+    };
+    document.registerElement('my-mail', {prototype: proto});
+</script>
+
+</body>
+</html>

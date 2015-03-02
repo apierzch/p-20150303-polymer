@@ -1,10 +1,33 @@
 [
     {
-        "uri": "web-components.html",
-        "id": "web-components",
+        "uri": "intro.html",
+        "id": "intro",
         "class": "step",
         "data": {
-            "rotate-z": 90
+        }
+    },
+    {
+        "uri": "intro-2.html",
+        "id": "intro2",
+        "class": "step",
+        "data": {
+            "x": 2000
+        }
+    },
+    {
+        "uri": "intro-3.html",
+        "id": "intro3",
+        "class": "step",
+        "data": {
+            "x": 2000
+        }
+    },
+    {
+        "uri": "agenda.html",
+        "id": "agenda",
+        "class": "step",
+        "data": {
+            "x": 2000
         }
     },
     {
@@ -12,17 +35,47 @@
         "id": "shadow-dom-1",
         "class": "step",
         "data": {
-            "y": 2000,
-            "rotate-z": 90
+            "x": 2000
         }
     },
     {
-        "uri": "shadow-demo.html",
-        "id": "shadow-demo",
+        "uri": "demo.html",
+        "id": "demo",
         "class": "step",
         "data": {
-            "y": 4000,
-            "rotate-z": 90
+            "x": 2000
+        }
+    },
+    {
+        "uri": "wrap-up.html",
+        "id": "wrap-up",
+        "class": "step",
+        "data": {
+            "x": 2000
+        }
+    },
+    {
+        "uri": "polymer.html",
+        "id": "polymer",
+        "class": "step",
+        "data": {
+            "x": 2000
+        }
+    },
+    {
+        "uri": "polymer-01.html",
+        "id": "polymer1",
+        "class": "step",
+        "data": {
+            "z": -5000
+        }
+    },
+    {
+        "uri": "polymer-02.html",
+        "id": "polymer2",
+        "class": "step",
+        "data": {
+            "x": 2000
         }
     }
 ]
